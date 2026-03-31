@@ -216,6 +216,7 @@ wss.on('connection', (browserWs) => {
     });
 });
 
-server.listen(3000, () => {
-    console.log('🎙️  Voice AI is live at http://localhost:3000\n');
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+    console.log(`🎙️  Voice AI is live at port ${port}\n`);
 });
