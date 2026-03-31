@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Assistant — Gemini Live</title>
+    <meta name="description" content="Real-time voice AI assistant powered by Google Gemini Multimodal Live API">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>Voice AI Assistant</h1>
+            </div>
+            <p class="subtitle">Powered by Gemini 2.5 Live</p>
+            <br>
+            <p class="subtitle">Made by Om Rajput</p>
+        </header>
+
+        <main class="chat-container">
+            <div class="messages" id="messages-container">
+                <!-- Messages injected by script.js -->
+            </div>
+
+            <div class="controls-container">
+                <div class="loading-indicator hidden" id="loading-indicator">
+                    <div class="dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>AI is responding...</p>
+                </div>
+
+                <div class="mic-wrapper">
+                    <!-- Live audio waveform — visible while recording -->
+                    <canvas id="visualizer" width="300" height="48" aria-hidden="true"></canvas>
+                    <button id="mic-btn" class="mic-btn" aria-label="Toggle Microphone" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C10.3431 2 9 3.34315 9 5V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V5C15 3.34315 13.6569 2 12 2Z" fill="currentColor"/>
+                            <path d="M5 10C5 9.44772 4.55228 9 4 9C3.44772 9 3 9.44772 3 10V11C3 15.6558 6.53676 19.4975 11 19.9272V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V19.9272C17.4632 19.4975 21 15.6558 21 11V10C21 9.44772 20.5523 9 20 9C19.4477 9 19 9.44772 19 10V11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11V10Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="ripple" id="ripple"></div>
+                    <div class="status-text" id="status-text">Connecting...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
